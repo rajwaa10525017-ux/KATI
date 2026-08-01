@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sweet Delights Bakery - Katalog Produk</title>
+<title>Sweet Delights Bakery - Tentang Kami</title>
 <style>
+
 
 :root {
   --coklat-tua: #5D4037;
@@ -245,11 +246,34 @@ marquee.promo-marquee {
 }
 
 .order-form select,
-.order-form input[type="text"] {
+.order-form input[type="text"],
+.order-form input[type="email"],
+.order-form input[type="date"],
+.order-form textarea {
   padding: 6px 8px;
   border: 1px solid var(--border-lembut);
   border-radius: 6px;
   font-size: .95rem;
+  font-family: inherit;
+}
+
+.order-form textarea {
+  width: 100%;
+  max-width: 420px;
+  resize: vertical;
+  min-height: 70px;
+}
+
+/* banner info saat data sudah otomatis terisi dari halaman Detail */
+.info-banner {
+  background-color: #E8F5E9;
+  border: 1px solid #A5D6A7;
+  color: #2E7D32;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-size: .9rem;
+  font-weight: bold;
 }
 
 .order-form .radio-group label,
@@ -456,6 +480,249 @@ marquee.promo-marquee {
   text-align: center;
 }
 
+/* ============ PROFIL / BIODATA (kontak) ============ */
+.profile-card {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  background-color: var(--krem-kartu);
+  border: 1px solid var(--krem-aksen);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
+
+.profile-card .profile-photo { flex: 0 0 180px; text-align: center; }
+
+.profile-card .profile-photo img {
+  width: 180px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid var(--krem-aksen);
+  box-shadow: var(--shadow);
+}
+
+.profile-card .profile-info { flex: 1 1 280px; }
+
+.biodata-table { width: 100%; border-collapse: collapse; margin-top: 6px; }
+.biodata-table td { padding: 7px 6px; vertical-align: top; }
+.biodata-table td.label { font-weight: bold; width: 190px; color: var(--coklat-tua); }
+.biodata-table td.sep { width: 12px; color: var(--coklat-medium); }
+
+/* ============ LIST INFO (sidebar kiri kontak) ============ */
+.info-list { list-style: none; padding: 0; margin: 0; text-align: left; }
+.info-list li {
+  padding: 8px 4px;
+  border-bottom: 1px dashed var(--border-lembut);
+  font-size: .92rem;
+}
+.info-list li:last-child { border-bottom: none; }
+
+/* ============ FORM HUBUNGI KAMI (kontak) ============ */
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 7px 9px;
+  border: 1px solid var(--border-lembut);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: .95rem;
+  width: 100%;
+  max-width: 360px;
+}
+
+.contact-form textarea { resize: vertical; min-height: 90px; }
+
+/* ============ TOMBOL SOSIAL MEDIA ============ */
+.social-links { margin-top: 18px; }
+
+.social-links a {
+  display: inline-block;
+  margin: 4px 8px 4px 0;
+  background-color: var(--coklat-medium);
+  color: var(--putih);
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: .85rem;
+  font-weight: bold;
+}
+
+.social-links a:hover { background-color: var(--oranye); text-decoration: none; }
+
+/* ============ VISI (kutipan bergaya, tentang.html) ============ */
+blockquote.vision-quote {
+  background-color: var(--krem-kartu);
+  border-left: 4px solid var(--oranye);
+  padding: 12px 18px;
+  font-style: italic;
+  color: var(--coklat-tua);
+  margin: 10px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+/* ============ TABEL KEUNGGULAN (tentang.html) ============ */
+table.keunggulan-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  box-shadow: var(--shadow);
+}
+
+table.keunggulan-table th,
+table.keunggulan-table td {
+  border: 1px solid var(--krem-aksen);
+  padding: 10px 12px;
+  text-align: left;
+}
+
+table.keunggulan-table th {
+  background-color: var(--krem-aksen);
+  color: var(--coklat-tua);
+}
+
+table.keunggulan-table td:first-child {
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--krem-kartu);
+  width: 26%;
+}
+
+/* ============ INVOICE / STRUK ============ */
+.invoice-box {
+  background-color: var(--putih);
+  border: 2px dashed var(--coklat-medium);
+  border-radius: var(--radius);
+  padding: 22px;
+  max-width: 520px;
+  margin: 0 auto;
+  box-shadow: var(--shadow);
+}
+
+.invoice-box .invoice-toko {
+  text-align: center;
+  border-bottom: 2px solid var(--krem-aksen);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.invoice-box .invoice-toko h3 {
+  margin: 0;
+  color: var(--coklat-tua);
+  font-family: Georgia, serif;
+}
+
+.invoice-box .invoice-toko p { margin: 2px 0; font-size: .85rem; color: #795548; }
+
+.invoice-meta { font-size: .9rem; margin-bottom: 12px; }
+.invoice-meta div { display: flex; justify-content: space-between; padding: 2px 0; }
+
+table.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: .92rem;
+}
+
+table.invoice-table th,
+table.invoice-table td {
+  padding: 7px 4px;
+  border-bottom: 1px dashed var(--border-lembut);
+  text-align: left;
+}
+
+table.invoice-table th { color: var(--coklat-tua); }
+table.invoice-table td.angka { text-align: right; }
+
+.invoice-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--oranye);
+  border-top: 2px solid var(--coklat-tua);
+  padding-top: 10px;
+  margin-top: 6px;
+}
+
+.invoice-note {
+  margin-top: 14px;
+  font-size: .85rem;
+  color: #795548;
+  border-top: 1px dashed var(--border-lembut);
+  padding-top: 10px;
+}
+
+.invoice-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.invoice-actions button {
+  margin: 4px 6px;
+}
+
+.btn-secondary {
+  background-color: #8D6E63;
+  color: var(--putih);
+  border: none;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover { background-color: #6D4C41; }
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #795548;
+}
+
+.empty-state a.btn-order { display: inline-block; margin-top: 14px; }
+
+@media print {
+  .site-header, .site-nav, .sidebar, .site-footer, .invoice-actions { display: none !important; }
+  .layout-wrapper { grid-template-columns: 1fr !important; }
+  .content-area { box-shadow: none; }
+}
+
+/* ============ TABEL KEUNGGULAN (tentang) ============ */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.compare-table th,
+.compare-table td {
+  border: 1px solid var(--krem-aksen);
+  padding: 10px;
+  text-align: left;
+}
+
+.compare-table th {
+  background-color: var(--krem-aksen);
+  color: var(--coklat-tua);
+}
+
+.compare-table td:first-child {
+  text-align: center;
+  font-weight: bold;
+  width: 30%;
+}
+
+blockquote.visi-quote {
+  border-left: 4px solid var(--coklat-medium);
+  background-color: var(--krem-kartu);
+  margin: 10px 0;
+  padding: 10px 16px;
+  font-style: italic;
+  color: var(--coklat-tua);
+}
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
   .layout-wrapper {
@@ -484,11 +751,11 @@ marquee.promo-marquee {
 
   <!-- ================= MENU ================= -->
   <nav class="site-nav">
-    <a href="index.html" class="active">Katalog Produk</a>
+    <a href="index.html">Katalog Produk</a>
     <a href="detail.html">Detail Produk</a>
     <a href="transaksi.html">Form Transaksi</a>
     <a href="kontak.html">Kontak Kami</a>
-    <a href="tentang.html">Tentang Perusahaan</a>
+    <a href="tentang.html" class="active">Tentang Perusahaan</a>
   </nav>
 
   <!-- ================= LAYOUT: LEFT | CONTENT | RIGHT ================= -->
@@ -496,91 +763,52 @@ marquee.promo-marquee {
 
     <!-- SIDEBAR KIRI -->
     <aside class="sidebar sidebar-left">
-      <h3>Order Online</h3>
+      <h3>FUFUFAFA</h3>
       <hr>
-      <a href="transaksi.html">
-        <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/icon%20order.png?raw=true" alt="Pesan Online Banner">
-      </a>
-      <p class="sidebar-caption">Klik gambar di atas untuk melakukan pemesanan cepat!</p>
     </aside>
 
-    <!-- CONTENT: KATALOG PRODUK -->
+    <!-- CONTENT: TENTANG PERUSAHAAN -->
     <main class="content-area">
-      <h2 class="page-title" style="text-align:center;">Katalog Produk Kami</h2>
-      <hr class="title-underline" style="margin-left:auto; margin-right:auto;">
+      <h2 class="page-title">Profil &amp; Sejarah Perusahaan</h2>
+      <hr class="title-underline">
 
-      <!-- Banner toko -->
-      <div class="store-banner">
-        <h3>🎂 Toko Roti &amp; Kue Rumahan Sejak 2018</h3>
-        <p>Dipanggang segar setiap hari, tanpa bahan pengawet. Gratis ongkir area Bandung untuk pembelian di atas Rp 100.000!</p>
-      </div>
+      <h3>Sejarah Singkat Pendirian</h3>
+      <p class="deskripsi">
+        Sweet Delights Bakery didirikan pertama kali pada tahun 2020 berawal dari sebuah industri rumahan kecil dengan tekad sederhana: menghadirkan kebahagiaan melalui keaslian rasa kue manis tradisional. Melalui racikan bahan alami terpilih yang diolah secara presisi, produk kami berhasil tumbuh pesat dan dipercaya pelanggan dalam melengkapi momen-momen manis di wilayah kota.
+      </p>
 
-      <div class="product-grid">
+      <h3>Visi &amp; Misi Usaha</h3>
+      <p><b>Visi Perusahaan:</b></p>
+      <blockquote class="visi-quote">
+        "Menjadi produsen bakery premium terkemuka yang menjadi lambang kelembutan rasa terbaik, mengutamakan kesehatan pangan konsumen, dan menghadirkan kreasi yang inovatif."
+      </blockquote>
 
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/roti%20coklat.jpg?raw=true" alt="Roti Manis Cokelat">
-          <h4>Roti Manis Cokelat</h4>
-          <p class="price-tag">Rp 8.000</p>
-          <a class="btn-beli" href="detail.html#produk1">Beli Sekarang</a>
-        </div>
+      <p><b>Misi Perusahaan:</b></p>
+      <ol>
+        <li>Memastikan bahan baku bermutu tinggi dan 100% tersertifikasi Halal.</li>
+        <li>Menjamin proses pemanggangan produk segar setiap hari (Fresh from the Oven).</li>
+        <li>Menghadirkan pelayanan pelanggan yang solutif, ramah, serta tanggap.</li>
+      </ol>
 
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/croissant%20butter.jpg?raw=true" alt="Croissant Butter">
-          <h4>Croissant Butter</h4>
-          <p class="price-tag">Rp 15.000</p>
-          <a class="btn-beli" href="detail.html#produk2">Beli Sekarang</a>
-        </div>
-
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/kue%20ulang%20tahun.jpg?raw=true" alt="Kue Tart Birthday">
-          <h4>Kue Tart Birthday</h4>
-          <p class="price-tag">Rp 150.000</p>
-          <a class="btn-beli" href="detail.html#produk3">Beli Sekarang</a>
-        </div>
-
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/Brownies%20Panggang.jpg?raw=true" alt="Brownies Panggang">
-          <h4>Brownies Panggang</h4>
-          <p class="price-tag">Rp 45.000</p>
-          <a class="btn-beli" href="detail.html#produk4">Beli Sekarang</a>
-        </div>
-
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/Baguette%20Perancis.jpg?raw=true" alt="Baguette Perancis">
-          <h4>Baguette Perancis</h4>
-          <p class="price-tag">Rp 12.000</p>
-          <a class="btn-beli" href="detail.html#produk5">Beli Sekarang</a>
-        </div>
-
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/Cupcake%20Vanilla.jpg?raw=true" alt="Cupcake Vanilla">
-          <h4>Cupcake Vanilla</h4>
-          <p class="price-tag">Rp 10.000</p>
-          <a class="btn-beli" href="detail.html#produk6">Beli Sekarang</a>
-        </div>
-
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/Donut%20Glazed.jpg?raw=true" alt="Donut Glazed">
-          <h4>Donut Glazed</h4>
-          <p class="price-tag">Rp 7.000</p>
-          <a class="btn-beli" href="detail.html#produk7">Beli Sekarang</a>
-        </div>
-
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/Cheese%20Cake%20Slice.jpg?raw=true" alt="Cheese Cake Slice">
-          <h4>Cheese Cake Slice</h4>
-          <p class="price-tag">Rp 25.000</p>
-          <a class="btn-beli" href="detail.html#produk8">Beli Sekarang</a>
-        </div>
-
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/Garlic%20Bread%202.jpg?raw=true" alt="Garlic Bread">
-          <h4>Garlic Bread</h4>
-          <p class="price-tag">Rp 18.000</p>
-          <a class="btn-beli" href="detail.html#produk9">Beli Sekarang</a>
-        </div>
-
-      </div>
+      <h3>Keunggulan Berbelanja di Tempat Kami</h3>
+      <table class="compare-table">
+        <tr>
+          <th>Aspek Mutu</th>
+          <th>Standar Jaminan Kami</th>
+        </tr>
+        <tr>
+          <td>Bahan Baku Utama</td>
+          <td>Mentega impor murni pilihan, buah segar tanpa pemanis buatan, tanpa pengawet kimia.</td>
+        </tr>
+        <tr>
+          <td>Garansi Produk</td>
+          <td>Kondisi empuk tahan lama secara alami karena pengolahan adonan yang maksimal.</td>
+        </tr>
+        <tr>
+          <td>Fleksibilitas</td>
+          <td>Menerima permintaan pembuatan dekorasi custom secara mendadak H-1 acara besar.</td>
+        </tr>
+      </table>
     </main>
 
     <!-- SIDEBAR KANAN -->
@@ -590,10 +818,6 @@ marquee.promo-marquee {
       <p><b>Setiap Hari</b><br>07.00 - 21.00 WIB</p>
       <p><b>Alamat Toko:</b><br>Jl. Toko Gue Manis No. 45, Bandung</p>
       <p><b>Hubungi Layanan:</b><br>0812-3456-7890</p>
-
-      <marquee class="marquee-vertical" direction="up" scrollamount="2" height="120">
-        <b>WEEKEND SPECIAL!</b><br>Beli 5 Roti Manis gratis 1 Donat Glazed. Berlaku khusus Sabtu &amp; Minggu.
-      </marquee>
     </aside>
 
   </div>
@@ -604,6 +828,7 @@ marquee.promo-marquee {
   </footer>
 
   <script>
+
 
 // Format angka jadi Rupiah, contoh: 12000 -> "Rp 12.000"
 function formatRupiah(angka) {
@@ -772,9 +997,255 @@ function initProductForm(form) {
   updateSubtotal(form);
 }
 
-// Jalankan untuk semua form produk begitu DOM siap
+// Inisialisasi form kontak/"Hubungi Kami": validasi + notifikasi (tanpa backend)
+function initContactForm(form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (!validasiForm(form)) {
+      tampilkanToast("Mohon lengkapi data terlebih dahulu.");
+      return;
+    }
+
+    tampilkanToast("Pesan berhasil dikirim! Kami akan segera membalas.");
+    form.reset();
+  });
+}
+
+// Hitung & tampilkan total harga (harga produk terpilih x qty) di form transaksi
+function hitungTotalTransaksi(form) {
+  const select = form.querySelector("#produk_pilihan");
+  const opt = select.options[select.selectedIndex];
+  const harga = parseInt(opt.dataset.price, 10) || 0;
+  const qtyInput = form.querySelector("#qtyTransaksi");
+  const qty = Math.max(1, parseInt(qtyInput.value, 10) || 1);
+  const total = harga * qty;
+
+  const totalEl = form.querySelector(".subtotal-value");
+  if (totalEl) totalEl.textContent = formatRupiah(total);
+
+  return total;
+}
+
+// Tampilkan/sembunyikan & wajibkan kolom "Alamat Pengiriman" sesuai metode penyerahan
+function toggleAlamatKirim(form) {
+  const delivery = form.querySelector('input[name="opsi_kirim"][value="delivery"]');
+  const alamatWrap = form.querySelector("#alamatKirimWrap");
+  const alamatInput = form.querySelector("#alamat_kirim");
+
+  if (delivery.checked) {
+    alamatWrap.style.display = "";
+    alamatInput.setAttribute("data-required", "");
+  } else {
+    alamatWrap.style.display = "none";
+    alamatInput.removeAttribute("data-required");
+    const errorEl = form.querySelector('.form-error[data-for="alamat_kirim"]');
+    if (errorEl) errorEl.classList.remove("show");
+  }
+}
+
+// Ambil data pesanan yang disimpan oleh detail.html (kalau ada) dan isi otomatis form transaksi
+function prefillDariDetail(form) {
+  const infoBanner = document.querySelector("#infoPrefill");
+  const dataMentah = localStorage.getItem("pesananAktif");
+  if (!dataMentah) return;
+
+  try {
+    const data = JSON.parse(dataMentah);
+    const select = form.querySelector("#produk_pilihan");
+
+    for (let i = 0; i < select.options.length; i++) {
+      if (select.options[i].dataset.name === data.produk) {
+        select.selectedIndex = i;
+        break;
+      }
+    }
+
+    form.querySelector("#qtyTransaksi").value = data.jumlah || 1;
+
+    if (data.opsi && Object.keys(data.opsi).length) {
+      const ringkasan = Object.entries(data.opsi)
+        .map(function (pair) { return pair[0] + ": " + pair[1]; })
+        .join(", ");
+      form.querySelector("#catatan_pesanan").value =
+        "Opsi dari halaman Detail (" + data.produk + ") -> " + ringkasan;
+    }
+
+    if (infoBanner) infoBanner.style.display = "";
+  } catch (err) {
+    // data rusak / tidak valid, biarkan form kosong seperti biasa
+  }
+}
+
+// Inisialisasi form transaksi utama
+function initTransaksiForm(form) {
+  prefillDariDetail(form);
+  toggleAlamatKirim(form);
+  hitungTotalTransaksi(form);
+
+  form.querySelectorAll('input[name="opsi_kirim"]').forEach(function (radio) {
+    radio.addEventListener("change", function () { toggleAlamatKirim(form); });
+  });
+
+  form.querySelector("#produk_pilihan").addEventListener("change", function () {
+    hitungTotalTransaksi(form);
+  });
+
+  const qtyInput = form.querySelector("#qtyTransaksi");
+  qtyInput.addEventListener("input", function () { hitungTotalTransaksi(form); });
+
+  const btnMinus = form.querySelector(".qty-minus");
+  const btnPlus = form.querySelector(".qty-plus");
+  if (btnMinus) {
+    btnMinus.addEventListener("click", function () {
+      qtyInput.value = Math.max(1, (parseInt(qtyInput.value, 10) || 1) - 1);
+      hitungTotalTransaksi(form);
+    });
+  }
+  if (btnPlus) {
+    btnPlus.addEventListener("click", function () {
+      qtyInput.value = (parseInt(qtyInput.value, 10) || 1) + 1;
+      hitungTotalTransaksi(form);
+    });
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let valid = validasiForm(form);
+
+    // metode pembayaran wajib pilih salah satu
+    const bayarTerpilih = form.querySelector('input[name="metode_bayar"]:checked');
+    const errBayar = form.querySelector('.form-error[data-for="metode_bayar"]');
+    if (!bayarTerpilih) {
+      valid = false;
+      if (errBayar) errBayar.classList.add("show");
+    } else if (errBayar) {
+      errBayar.classList.remove("show");
+    }
+
+    if (!valid) {
+      tampilkanToast("Mohon lengkapi semua data wajib terlebih dahulu.");
+      return;
+    }
+
+    const select = form.querySelector("#produk_pilihan");
+    const opt = select.options[select.selectedIndex];
+    const total = hitungTotalTransaksi(form);
+
+    const invoiceData = {
+      no_invoice: "INV-" + Date.now(),
+      nama_pelanggan: form.nama_pelanggan.value,
+      no_wa: form.no_wa.value,
+      email_pelanggan: form.email_pelanggan.value,
+      tgl_pesan: form.tgl_pesan.value,
+      opsi_kirim: form.opsi_kirim.value,
+      alamat_kirim: form.alamat_kirim.value,
+      produk: opt.dataset.name,
+      harga_satuan: parseInt(opt.dataset.price, 10) || 0,
+      qty: parseInt(form.querySelector("#qtyTransaksi").value, 10) || 1,
+      catatan_pesanan: form.catatan_pesanan.value,
+      metode_bayar: bayarTerpilih.value,
+      total: total,
+      waktu: new Date().toISOString()
+    };
+
+    localStorage.setItem("invoiceAktif", JSON.stringify(invoiceData));
+    localStorage.removeItem("pesananAktif");
+
+    tampilkanToast("Pesanan diterima! Mengalihkan ke invoice...");
+    setTimeout(function () {
+      window.location.href = "invoice.html";
+    }, 800);
+  });
+}
+
+// Label metode pembayaran & pengiriman yang enak dibaca (untuk invoice)
+const LABEL_BAYAR = {
+  tf_bca: "Transfer Bank Virtual Account (BCA)",
+  ewallet: "E-Wallet (GoPay / OVO / Dana)",
+  cod: "Bayar Langsung saat Serah Terima (COD)"
+};
+
+const LABEL_KIRIM = {
+  pickup: "Ambil Sendiri di Toko (Pickup)",
+  delivery: "Kirim Via Kurir Toko (Delivery)"
+};
+
+// Tampilkan invoice/struk dari data yang disimpan transaksi.html, atau pesan kosong kalau belum ada
+function initInvoicePage() {
+  const isiBox = document.querySelector("#invoiceIsi");
+  const kosongBox = document.querySelector("#invoiceKosong");
+  const dataMentah = localStorage.getItem("invoiceAktif");
+
+  if (!dataMentah) {
+    if (kosongBox) kosongBox.style.display = "";
+    if (isiBox) isiBox.style.display = "none";
+    return;
+  }
+
+  let data;
+  try {
+    data = JSON.parse(dataMentah);
+  } catch (err) {
+    if (kosongBox) kosongBox.style.display = "";
+    if (isiBox) isiBox.style.display = "none";
+    return;
+  }
+
+  document.querySelector("#invNoInvoice").textContent = data.no_invoice;
+  document.querySelector("#invTanggal").textContent = new Date(data.waktu).toLocaleString("id-ID", {
+    dateStyle: "long", timeStyle: "short"
+  });
+  document.querySelector("#invNama").textContent = data.nama_pelanggan;
+  document.querySelector("#invWa").textContent = data.no_wa;
+  document.querySelector("#invPengambilan").textContent = data.tgl_pesan;
+  document.querySelector("#invMetodeKirim").textContent = LABEL_KIRIM[data.opsi_kirim] || data.opsi_kirim;
+
+  const baris = document.querySelector("#invAlamatRow");
+  if (data.opsi_kirim === "delivery" && data.alamat_kirim) {
+    baris.style.display = "";
+    document.querySelector("#invAlamat").textContent = data.alamat_kirim;
+  } else {
+    baris.style.display = "none";
+  }
+
+  document.querySelector("#invProduk").textContent = data.produk;
+  document.querySelector("#invHarga").textContent = formatRupiah(data.harga_satuan);
+  document.querySelector("#invQty").textContent = data.qty;
+  document.querySelector("#invSubtotal").textContent = formatRupiah(data.harga_satuan * data.qty);
+  document.querySelector("#invTotal").textContent = formatRupiah(data.total);
+  document.querySelector("#invMetodeBayar").textContent = LABEL_BAYAR[data.metode_bayar] || data.metode_bayar;
+
+  const catatanRow = document.querySelector("#invCatatanRow");
+  if (data.catatan_pesanan) {
+    catatanRow.style.display = "";
+    document.querySelector("#invCatatan").textContent = data.catatan_pesanan;
+  } else {
+    catatanRow.style.display = "none";
+  }
+
+  const btnCetak = document.querySelector("#btnCetakInvoice");
+  if (btnCetak) btnCetak.addEventListener("click", function () { window.print(); });
+
+  const btnBaru = document.querySelector("#btnPesanBaru");
+  if (btnBaru) {
+    btnBaru.addEventListener("click", function () {
+      localStorage.removeItem("invoiceAktif");
+      window.location.href = "index.html";
+    });
+  }
+}
+
+// Jalankan untuk semua form begitu DOM siap
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".product-form").forEach(initProductForm);
+  document.querySelectorAll(".contact-form").forEach(initContactForm);
+
+  const formTransaksi = document.querySelector("#formTransaksi");
+  if (formTransaksi) initTransaksiForm(formTransaksi);
+
+  if (document.querySelector("#invoiceIsi")) initInvoicePage();
 });
 
 </script>

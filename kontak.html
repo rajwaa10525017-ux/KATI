@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sweet Delights Bakery - Katalog Produk</title>
+<title>Sweet Delights Bakery - Kontak Kami</title>
 <style>
 
 :root {
@@ -456,6 +456,76 @@ marquee.promo-marquee {
   text-align: center;
 }
 
+/* ============ PROFIL / BIODATA (kontak) ============ */
+.profile-card {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  background-color: var(--krem-kartu);
+  border: 1px solid var(--krem-aksen);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
+
+.profile-card .profile-photo { flex: 0 0 180px; text-align: center; }
+
+.profile-card .profile-photo img {
+  width: 180px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid var(--krem-aksen);
+  box-shadow: var(--shadow);
+}
+
+.profile-card .profile-info { flex: 1 1 280px; }
+
+.biodata-table { width: 100%; border-collapse: collapse; margin-top: 6px; }
+.biodata-table td { padding: 7px 6px; vertical-align: top; }
+.biodata-table td.label { font-weight: bold; width: 190px; color: var(--coklat-tua); }
+.biodata-table td.sep { width: 12px; color: var(--coklat-medium); }
+
+/* ============ LIST INFO (sidebar kiri kontak) ============ */
+.info-list { list-style: none; padding: 0; margin: 0; text-align: left; }
+.info-list li {
+  padding: 8px 4px;
+  border-bottom: 1px dashed var(--border-lembut);
+  font-size: .92rem;
+}
+.info-list li:last-child { border-bottom: none; }
+
+/* ============ FORM HUBUNGI KAMI (kontak) ============ */
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 7px 9px;
+  border: 1px solid var(--border-lembut);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: .95rem;
+  width: 100%;
+  max-width: 360px;
+}
+
+.contact-form textarea { resize: vertical; min-height: 90px; }
+
+/* ============ TOMBOL SOSIAL MEDIA ============ */
+.social-links { margin-top: 18px; }
+
+.social-links a {
+  display: inline-block;
+  margin: 4px 8px 4px 0;
+  background-color: var(--coklat-medium);
+  color: var(--putih);
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: .85rem;
+  font-weight: bold;
+}
+
+.social-links a:hover { background-color: var(--oranye); text-decoration: none; }
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
   .layout-wrapper {
@@ -484,10 +554,10 @@ marquee.promo-marquee {
 
   <!-- ================= MENU ================= -->
   <nav class="site-nav">
-    <a href="index.html" class="active">Katalog Produk</a>
+    <a href="index.html">Katalog Produk</a>
     <a href="detail.html">Detail Produk</a>
     <a href="transaksi.html">Form Transaksi</a>
-    <a href="kontak.html">Kontak Kami</a>
+    <a href="kontak.html" class="active">Kontak Kami</a>
     <a href="tentang.html">Tentang Perusahaan</a>
   </nav>
 
@@ -496,91 +566,83 @@ marquee.promo-marquee {
 
     <!-- SIDEBAR KIRI -->
     <aside class="sidebar sidebar-left">
-      <h3>Order Online</h3>
+      <h3>Kenapa Pilih Kami</h3>
       <hr>
-      <a href="transaksi.html">
-        <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/icon%20order.png?raw=true" alt="Pesan Online Banner">
-      </a>
-      <p class="sidebar-caption">Klik gambar di atas untuk melakukan pemesanan cepat!</p>
+      <ul class="info-list">
+        <li>🥖 Fresh from the oven setiap hari</li>
+        <li>🚴 Gratis ongkir area Bandung min. Rp 100.000</li>
+        <li>💳 Bisa bayar Transfer / COD / QRIS</li>
+        <li>⭐ Rating 4.9 dari 500+ pelanggan</li>
+      </ul>
     </aside>
 
-    <!-- CONTENT: KATALOG PRODUK -->
+    <!-- CONTENT: KONTAK & BIODATA -->
     <main class="content-area">
-      <h2 class="page-title" style="text-align:center;">Katalog Produk Kami</h2>
-      <hr class="title-underline" style="margin-left:auto; margin-right:auto;">
+      <h2 class="page-title">Kontak Hubung &amp; Biodata Mahasiswa</h2>
+      <hr class="title-underline">
 
-      <!-- Banner toko -->
-      <div class="store-banner">
-        <h3>🎂 Toko Roti &amp; Kue Rumahan Sejak 2018</h3>
-        <p>Dipanggang segar setiap hari, tanpa bahan pengawet. Gratis ongkir area Bandung untuk pembelian di atas Rp 100.000!</p>
+      <div class="profile-card">
+        <div class="profile-photo">
+          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/Pas%20Foto%20Almet%20Uqinom%20(1).png?raw=true" alt="Foto Resmi Mahasiswa">
+        </div>
+        <div class="profile-info">
+          <h3>Profil Pengembang Website</h3>
+          <hr class="pemisah">
+          <table class="biodata-table">
+            <tr>
+              <td class="label">Nama</td><td class="sep">:</td><td>Rajwaa Eryan Siregar</td>
+            </tr>
+            <tr>
+              <td class="label">NIM (Nomor Induk)</td><td class="sep">:</td><td>10525017</td>
+            </tr>
+            <tr>
+              <td class="label">Kelas Kuliah</td><td class="sep">:</td><td>IS-1</td>
+            </tr>
+            <tr>
+              <td class="label">Program Studi</td><td class="sep">:</td><td>Sistem Informasi / Teknik Informatika</td>
+            </tr>
+            <tr>
+              <td class="label">Surel / Email</td><td class="sep">:</td><td>rajwaa.10525017@mahasiswa.unikom.ac.id</td>
+            </tr>
+            <tr>
+              <td class="label">Mata Kuliah</td><td class="sep">:</td><td>Komputer Aplikasi Teknologi Informasi</td>
+            </tr>
+          </table>
+
+          <div class="social-links">
+            <a href="mailto:rajwaa.10525017@mahasiswa.unikom.ac.id">✉️ Email</a>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">💬 WhatsApp Toko</a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener">📷 Instagram Toko</a>
+          </div>
+        </div>
       </div>
 
-      <div class="product-grid">
-
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/roti%20coklat.jpg?raw=true" alt="Roti Manis Cokelat">
-          <h4>Roti Manis Cokelat</h4>
-          <p class="price-tag">Rp 8.000</p>
-          <a class="btn-beli" href="detail.html#produk1">Beli Sekarang</a>
+      <!-- Form Hubungi Kami -->
+      <h3 style="color:var(--coklat-tua); margin-top:28px;">Hubungi Kami</h3>
+      <hr class="pemisah">
+      <form class="contact-form order-form" id="formHubungi">
+        <div class="form-row">
+          <label class="form-label" for="nama_pengunjung">Nama:</label>
+          <input type="text" id="nama_pengunjung" name="nama_pengunjung" data-required placeholder="Nama Anda">
         </div>
+        <span class="form-error" data-for="nama_pengunjung">Nama wajib diisi.</span>
 
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/croissant%20butter.jpg?raw=true" alt="Croissant Butter">
-          <h4>Croissant Butter</h4>
-          <p class="price-tag">Rp 15.000</p>
-          <a class="btn-beli" href="detail.html#produk2">Beli Sekarang</a>
+        <div class="form-row">
+          <label class="form-label" for="email_pengunjung">Email:</label>
+          <input type="email" id="email_pengunjung" name="email_pengunjung" data-required placeholder="nama@email.com">
         </div>
+        <span class="form-error" data-for="email_pengunjung">Email wajib diisi.</span>
 
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/kue%20ulang%20tahun.jpg?raw=true" alt="Kue Tart Birthday">
-          <h4>Kue Tart Birthday</h4>
-          <p class="price-tag">Rp 150.000</p>
-          <a class="btn-beli" href="detail.html#produk3">Beli Sekarang</a>
+        <div class="form-row">
+          <label class="form-label" for="pesan_pengunjung">Pesan:</label>
+          <textarea id="pesan_pengunjung" name="pesan_pengunjung" data-required placeholder="Tulis pertanyaan atau pesan Anda di sini..."></textarea>
         </div>
+        <span class="form-error" data-for="pesan_pengunjung">Pesan wajib diisi.</span>
 
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/Brownies%20Panggang.jpg?raw=true" alt="Brownies Panggang">
-          <h4>Brownies Panggang</h4>
-          <p class="price-tag">Rp 45.000</p>
-          <a class="btn-beli" href="detail.html#produk4">Beli Sekarang</a>
+        <div class="form-row">
+          <button type="submit" class="btn-order">Kirim Pesan</button>
         </div>
-
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/Baguette%20Perancis.jpg?raw=true" alt="Baguette Perancis">
-          <h4>Baguette Perancis</h4>
-          <p class="price-tag">Rp 12.000</p>
-          <a class="btn-beli" href="detail.html#produk5">Beli Sekarang</a>
-        </div>
-
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/Cupcake%20Vanilla.jpg?raw=true" alt="Cupcake Vanilla">
-          <h4>Cupcake Vanilla</h4>
-          <p class="price-tag">Rp 10.000</p>
-          <a class="btn-beli" href="detail.html#produk6">Beli Sekarang</a>
-        </div>
-
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/Donut%20Glazed.jpg?raw=true" alt="Donut Glazed">
-          <h4>Donut Glazed</h4>
-          <p class="price-tag">Rp 7.000</p>
-          <a class="btn-beli" href="detail.html#produk7">Beli Sekarang</a>
-        </div>
-
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/Cheese%20Cake%20Slice.jpg?raw=true" alt="Cheese Cake Slice">
-          <h4>Cheese Cake Slice</h4>
-          <p class="price-tag">Rp 25.000</p>
-          <a class="btn-beli" href="detail.html#produk8">Beli Sekarang</a>
-        </div>
-
-        <div class="product-card">
-          <img src="https://github.com/rajwaa10525017-ux/KATI/blob/main/Garlic%20Bread%202.jpg?raw=true" alt="Garlic Bread">
-          <h4>Garlic Bread</h4>
-          <p class="price-tag">Rp 18.000</p>
-          <a class="btn-beli" href="detail.html#produk9">Beli Sekarang</a>
-        </div>
-
-      </div>
+      </form>
     </main>
 
     <!-- SIDEBAR KANAN -->
@@ -590,10 +652,6 @@ marquee.promo-marquee {
       <p><b>Setiap Hari</b><br>07.00 - 21.00 WIB</p>
       <p><b>Alamat Toko:</b><br>Jl. Toko Gue Manis No. 45, Bandung</p>
       <p><b>Hubungi Layanan:</b><br>0812-3456-7890</p>
-
-      <marquee class="marquee-vertical" direction="up" scrollamount="2" height="120">
-        <b>WEEKEND SPECIAL!</b><br>Beli 5 Roti Manis gratis 1 Donat Glazed. Berlaku khusus Sabtu &amp; Minggu.
-      </marquee>
     </aside>
 
   </div>
@@ -772,9 +830,25 @@ function initProductForm(form) {
   updateSubtotal(form);
 }
 
-// Jalankan untuk semua form produk begitu DOM siap
+// Inisialisasi form kontak/"Hubungi Kami": validasi + notifikasi (tanpa backend)
+function initContactForm(form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (!validasiForm(form)) {
+      tampilkanToast("Mohon lengkapi data terlebih dahulu.");
+      return;
+    }
+
+    tampilkanToast("Pesan berhasil dikirim! Kami akan segera membalas.");
+    form.reset();
+  });
+}
+
+// Jalankan untuk semua form begitu DOM siap
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".product-form").forEach(initProductForm);
+  document.querySelectorAll(".contact-form").forEach(initContactForm);
 });
 
 </script>
